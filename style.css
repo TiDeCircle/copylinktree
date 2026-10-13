@@ -1,7 +1,6 @@
 :root {
-  --green: #0f7a4a;
-  --green-dark: #0a5c37;
-  --green-light: #1f9a5e;
+  --green: #088c5b;      /* สีเดียวกับขอบล่างของภูเขา */
+  --green-dark: #03482d;
   --ink: #000;
   --card: #fff;
   --page-bg: #e3ebe7;
@@ -25,14 +24,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   overflow: hidden;
-  background-color: var(--green);
-  /* ลายจุด halftone + แถบไล่สีแนวตั้ง ให้ดูคล้ายพื้นหลังใน ref */
-  background-image:
-    radial-gradient(rgba(0, 0, 0, .18) 1.2px, transparent 1.3px),
-    repeating-linear-gradient(90deg,
-      rgba(255, 255, 255, .05) 0 22px,
-      rgba(0, 0, 0, .06) 22px 44px);
-  background-size: 6px 6px, 100% 100%;
+  background: linear-gradient(180deg, var(--green) 35%, var(--green-dark) 100%);
 }
 
 @media (min-width: 520px) {
@@ -148,26 +140,6 @@ body {
   0%, 100% { transform: translate(-50%, 0); }
   50%      { transform: translate(-50%, -6px); }
 }
-
-.icon-btn {
-  position: absolute;
-  top: 14px;
-  z-index: 3;
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border: 0;
-  border-radius: 12px;
-  background: rgba(40, 40, 40, .55);
-  color: #fff;
-  cursor: pointer;
-  backdrop-filter: blur(6px);
-  transition: background .15s;
-}
-.icon-btn:hover { background: rgba(40, 40, 40, .75); }
-.icon-btn--left { left: 14px; }
-.icon-btn--right { right: 14px; }
 
 /* ---------- Profile ---------- */
 .profile {
