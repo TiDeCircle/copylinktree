@@ -1,6 +1,6 @@
 :root {
-  --green: #088c5b;      /* สีเดียวกับขอบล่างของภูเขา */
-  --green-dark: #03482d;
+  --green: #2b4a30;      /* สีเดียวกับหญ้าขอบล่างของรูปพื้นหลัง */
+  --green-dark: #142417;
   --ink: #000;
   --card: #fff;
   --page-bg: #e3ebe7;
@@ -24,7 +24,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   overflow: hidden;
-  background: linear-gradient(180deg, var(--green) 35%, var(--green-dark) 100%);
+  background: linear-gradient(180deg, var(--green) 55%, var(--green-dark) 100%);
 }
 
 @media (min-width: 520px) {
@@ -39,89 +39,24 @@ body {
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  aspect-ratio: 1 / 0.95;
+  aspect-ratio: 1 / 1.25;
 }
 
-.scene {
+.bg {
   position: absolute;
-  inset: 0;
-  overflow: hidden;
-}
-.scene img { position: absolute; display: block; user-select: none; }
-
-.sky {
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 30%;
+  object-position: 50% 100%;
 }
 
-/* เมฆลอยช้า ๆ */
-.cloud { opacity: .95; animation: drift 26s ease-in-out infinite alternate; }
-.cloud--1 { width: 62%; left: -14%; top: 6%; }
-.cloud--2 { width: 70%; right: -22%; top: 2%; animation-duration: 32s; animation-direction: alternate-reverse; }
-.cloud--3 { width: 55%; left: -18%; top: 36%; animation-duration: 22s; }
-.cloud--4 { width: 75%; right: -30%; top: 30%; animation-duration: 36s; animation-direction: alternate-reverse; }
-
-@keyframes drift {
-  from { transform: translateX(-4%); }
-  to   { transform: translateX(6%); }
-}
-
-/* กังหันลม: เสา + ใบพัดที่หมุนรอบแกน (สัดส่วนอิงจากไฟล์ Asset 20) */
-.turbine {
-  position: absolute;
-  aspect-ratio: 792 / 1560;
-}
-.turbine .tower { left: 39.3%; top: 32.5%; width: 19.7%; }
-.turbine .rotor {
-  left: 0;
-  top: 0;
-  width: 100%;
-  transform-origin: 49.3% 64.6%;
-  animation: spin 7s linear infinite;
-}
-.turbine--1 { width: 19%; left: 1%;  bottom: 14%; }
-.turbine--2 { width: 11%; left: 21%; bottom: 17%; opacity: .9; }
-.turbine--3 { width: 12%; right: 20%; bottom: 16%; opacity: .95; }
-.turbine--4 { width: 21%; right: -1%; bottom: 12%; }
-.turbine--2 .rotor { animation-duration: 9s; animation-delay: -2s; }
-.turbine--3 .rotor { animation-duration: 8s; animation-delay: -5s; }
-.turbine--4 .rotor { animation-duration: 6s; animation-delay: -1s; }
-
-@keyframes spin { to { transform: rotate(360deg); } }
-
-.hills {
-  left: 50%;
-  bottom: 0;
-  width: 200%;
-  transform: translateX(-50%);
-}
-
-/* ดาวกระพริบ */
-.sparkle {
-  position: absolute;
-  color: #fff6c9;
-  text-shadow: 0 0 8px rgba(255, 240, 170, .9);
-  animation: twinkle 2.4s ease-in-out infinite;
-}
-.sparkle--1 { top: 12%; left: 14%; font-size: 18px; }
-.sparkle--2 { top: 8%;  right: 26%; font-size: 13px; animation-delay: -.8s; }
-.sparkle--3 { top: 52%; left: 42%; font-size: 12px; animation-delay: -1.5s; }
-.sparkle--4 { top: 48%; right: 12%; font-size: 16px; animation-delay: -.4s; }
-
-@keyframes twinkle {
-  0%, 100% { opacity: .2; transform: scale(.7); }
-  50%      { opacity: 1;  transform: scale(1); }
-}
-
-/* ไล่สีจากเนินเขาลงไปเป็นสีเขียวของหน้า */
+/* ไล่สีจากเนินหญ้าลงไปเป็นสีเขียวของหน้า */
 .hero::after {
   content: "";
   position: absolute;
   inset: auto 0 0 0;
-  height: 22%;
+  height: 30%;
   background: linear-gradient(180deg, transparent, var(--green));
   pointer-events: none;
 }
@@ -129,7 +64,7 @@ body {
 .logo {
   position: absolute;
   left: 50%;
-  top: 46%;
+  top: 30%;
   width: 82%;
   transform: translate(-50%, -50%);
   filter: drop-shadow(0 6px 10px rgba(0, 60, 30, .25));
@@ -145,9 +80,10 @@ body {
 .profile {
   position: relative;
   z-index: 3;
-  margin-top: -28px;
+  margin-top: -90px;
   padding: 0 24px;
   text-align: center;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, .35);
 }
 
 .title {
