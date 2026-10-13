@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#0f7a4a" />
   <meta property="og:title" content="greeninaction.space" />
   <meta property="og:description" content="เปลี่ยนเรื่องรักษ์โลกให้เป็นการลงมือทำ! มาเรียนรู้วิธีสื่อสารเรื่องสีเขียวให้สนุก" />
-  <meta property="og:image" content="assets/hero.png" />
+  <meta property="og:image" content="assets/logo.png" />
   <link rel="icon" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,10 +17,29 @@
 </head>
 <body>
   <main class="page">
-    <!-- Hero: ใส่รูปปก (ภาพท้องฟ้า + โลโก้ Green In Action) ไว้ที่ assets/hero.png -->
+    <!-- Hero: ปกซ้อนกันหลายชั้น (ท้องฟ้า เมฆ กังหันลม เนินเขา โลโก้) รูปอยู่ใน assets/ -->
     <header class="hero">
-      <img class="hero-img" src="assets/hero.png" alt="Green In Action" onerror="this.remove()" />
-      <div class="hero-fallback" aria-hidden="true">Green<br />In Action</div>
+      <div class="scene" aria-hidden="true">
+        <img class="sky" src="assets/sky.webp" alt="" />
+        <img class="cloud cloud--1" src="assets/cloud-1.webp" alt="" />
+        <img class="cloud cloud--2" src="assets/cloud-2.webp" alt="" />
+        <img class="cloud cloud--3" src="assets/cloud-3.webp" alt="" />
+        <img class="cloud cloud--4" src="assets/cloud-4.webp" alt="" />
+
+        <div class="turbine turbine--1"><img class="tower" src="assets/tower.webp" alt="" /><img class="rotor" src="assets/rotor.webp" alt="" /></div>
+        <div class="turbine turbine--2"><img class="tower" src="assets/tower.webp" alt="" /><img class="rotor" src="assets/rotor.webp" alt="" /></div>
+        <div class="turbine turbine--3"><img class="tower" src="assets/tower.webp" alt="" /><img class="rotor" src="assets/rotor.webp" alt="" /></div>
+        <div class="turbine turbine--4"><img class="tower" src="assets/tower.webp" alt="" /><img class="rotor" src="assets/rotor.webp" alt="" /></div>
+
+        <img class="hills" src="assets/hills.webp" alt="" />
+
+        <span class="sparkle sparkle--1">✦</span>
+        <span class="sparkle sparkle--2">✦</span>
+        <span class="sparkle sparkle--3">✦</span>
+        <span class="sparkle sparkle--4">✦</span>
+      </div>
+
+      <img class="logo" src="assets/logo.webp" alt="Green In Action" />
 
       <a class="icon-btn icon-btn--left" href="#" aria-label="หน้าแรก">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
